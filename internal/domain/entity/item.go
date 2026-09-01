@@ -5,7 +5,7 @@ type Item struct {
 	ExpiresAt *int64
 }
 
-func (i *Item) isExpired(now int64) bool {
+func (i *Item) IsExpired(now int64) bool {
 	if i.ExpiresAt == nil {
 		return false
 	}
