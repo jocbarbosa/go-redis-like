@@ -12,6 +12,6 @@ type KeyValueRepository interface {
 	Keys(ctx context.Context, pattern string) []string
 	Exists(ctx context.Context, key string) bool
 	Size(ctx context.Context) int
-	StartCleanup(intervalMs int64)
+	StartCleanup(ctx context.Context, intervalMs int64)
 	StopCleanup()
 }
