@@ -58,7 +58,7 @@ func (p *Parser) FormatResponse(result any) string {
 		}
 		return "ERR operation failed"
 	case error:
-		return p.FormarError(v)
+		return p.FormatError(v)
 	default:
 		return fmt.Sprintf("%v", result)
 	}
@@ -68,7 +68,7 @@ func (p *Parser) FormatOK() string {
 	return "OK"
 }
 
-func (p *Parser) FormarError(msg error) string {
+func (p *Parser) FormatError(msg error) string {
 	return fmt.Sprintf("ERR: %s", msg.Error())
 }
 
